@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
+import Header from "./header";
 import styles from "./layout.module.css";
 
 type Props = {
@@ -21,6 +22,7 @@ const Layout: React.FC<Props> = (props) => (
       )}
       <link rel="icon" href="/favicon.ico" />
     </Head>
+    <Header />
     <main className={styles.container}>{props.children}</main>
   </>
 );

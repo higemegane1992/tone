@@ -1,0 +1,17 @@
+.wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: 0 calc(var(--spacer) * 6);
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+}
