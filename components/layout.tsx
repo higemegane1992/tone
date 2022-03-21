@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 import Header from "./header";
-import styles from "./layout.module.css";
+import styles from "./layout.module.scss";
 
 type Props = {
   title: string;

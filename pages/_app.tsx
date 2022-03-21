@@ -1,11 +1,8 @@
-import "sanitize.css";
-import "sanitize.css/forms.css";
-import "sanitize.css/typography.css";
-import "../styles/globals.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-config.autoAddCss = false;
 import type { AppProps } from "next/app";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "../styles/globals.scss";
+
+config.autoAddCss = false;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;

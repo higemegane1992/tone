@@ -1,0 +1,90 @@
+/* Buttons */
+button {
+  align-items: center;
+  border: none;
+  border-radius: $radius;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: $size-11;
+  font-weight: $weight-1;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0 $spacer * 4;
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: $white;
+}
+
+/* Spacing */
+$space-list: (
+  m: margin,
+  mt: margin-top,
+  mb: margin-bottom,
+  ms: margin-left,
+  me: margin-right,
+  mx: (
+    margin-left,
+    margin-right,
+  ),
+  my: (
+    margin-top,
+    margin-bottom,
+  ),
+  p: padding,
+  pt: padding-top,
+  pb: padding-bottom,
+  ps: padding-left,
+  pe: padding-right,
+  px: (
+    padding-left,
+    padding-right,
+  ),
+  py: (
+    padding-top,
+    padding-bottom,
+  ),
+);
+
+@each $key, $values in $space-list {
+  @for $i from 0 through 5 {
+    .#{$key}-#{$i} {
+      @each $value in $values {
+        #{$value}: $spacer * $i;
+      }
+    }
+  }
+}
+
+/* Borders */
+$border-list: (
+  border: border,
+  border-top: border-top,
+  border-bottom: border-bottom,
+  border-start: border-left,
+  border-end: border-right,
+);
+
+@each $key, $value in $border-list {
+  .#{$key} {
+    #{$value}: 1px solid;
+  }
+}
+
+$border-colors: (
+  gray-1: $gray-1,
+  gray-2: $gray-2,
+  gray-3: $gray-3,
+  gray-4: $gray-4,
+);
+
+@each $key, $value in $border-colors {
+  .border-#{$key} {
+    border-color: $value;
+  }
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}

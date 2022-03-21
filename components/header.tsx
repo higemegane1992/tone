@@ -3,11 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
-import styles from "./header.module.css";
-import utilStyles from "../styles/utils.module.css";
+import styles from "./header.module.scss";
 
 const Header: React.FC = () => (
-  <header className={utilStyles.border4}>
+  <header className="border-bottom border-gray-4">
     <div className={styles.wrapper}>
       <Link href="/">
         <a className={styles.logo}>
@@ -20,10 +19,10 @@ const Header: React.FC = () => (
           height={32}
           width={32}
           alt="profile"
-          className={utilStyles.roundedCircle}
+          className="rounded-circle"
         />
-        <button className={`${utilStyles.btnPrimary} ${utilStyles.ml4}`}>
-          <FontAwesomeIcon icon={faPen} className={utilStyles.mr1} />
+        <button className="btn-primary ms-4">
+          <FontAwesomeIcon icon={faPen} className="me-1" />
           投稿
         </button>
       </div>
