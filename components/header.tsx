@@ -3,9 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "./navbar";
 import styles from "./header.module.scss";
 
-const Header: React.FC = () => (
+type Props = {
+  navbar: boolean;
+};
+
+const Header: React.FC<Props> = (props) => (
   <header className="border-bottom border-gray-4">
     <div className={styles.wrapper}>
       <Link href="/">
@@ -27,6 +32,15 @@ const Header: React.FC = () => (
         </button>
       </div>
     </div>
+    {props.navbar && (
+      <Navbar
+        navs={[
+          { label: "ホーム", link: "/" },
+          { label: "注目", link: "/recomemend" },
+          { label: "toneを学ぶ", link: "/help" },
+        ]}
+      />
+    )}
   </header>
 );
 

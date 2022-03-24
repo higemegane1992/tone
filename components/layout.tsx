@@ -6,6 +6,7 @@ import styles from "./layout.module.scss";
 type Props = {
   title: string;
   description: string;
+  navbar: boolean;
   children: ReactNode;
 };
 
@@ -22,7 +23,7 @@ const Layout: React.FC<Props> = (props) => (
       )}
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <Header />
+    <Header navbar={props.navbar} />
     <main className={styles.container}>{props.children}</main>
   </>
 );
