@@ -26,9 +26,9 @@ const Header: React.FC<Props> = (props) => (
           alt="profile"
           className="rounded-circle"
         />
-        <button className="btn-primary ms-4">
-          <FontAwesomeIcon icon={faPen} className="me-1" />
-          投稿
+        <button className={`btn-primary ${styles.button}`}>
+          <FontAwesomeIcon icon={faPen} className={styles.icon} />
+          <span className={styles.label}>投稿</span>
         </button>
       </div>
     </div>

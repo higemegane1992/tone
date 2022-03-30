@@ -3,6 +3,8 @@
 .container {
   display: flex;
   justify-content: center;
-  padding: 0 $spacer * 6 0 $spacer * 4;
   width: 100%;
+  @include media-query(lg) {
+    padding: 0 $spacer * 6 0 $spacer * 4;
+  }
 }

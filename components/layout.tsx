@@ -16,11 +16,13 @@ const Layout: React.FC<Props> = (props) => (
       <title>
         {props.title ? props.title : "tone ――つくる、つながる、とどける。"}
       </title>
-      {props.description ? (
+      {props.description && (
         <meta name="description" content={props.description} />
-      ) : (
-        <></>
       )}
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+      ></meta>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <Header navbar={props.navbar} />

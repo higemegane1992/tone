@@ -25,6 +25,22 @@ $size-11: 12px;
 $weight-1: 700;
 $weight-2: 400;
 
+// Breakpoints
+$breakpoints: (
+  xs: 361px,
+  sm: 481px,
+  md: 769px,
+  lg: 941px,
+  xl: 1280px,
+  xxl: 2048px,
+);
+
+@mixin media-query($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
 // Spacing
 $spacer: 4px;
 
